@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PC Parts | Custom PC Building Guide</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Custom PC Building Guide</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="parts.html">PC Parts</a></li>
+          <li><a href="building.html">Build Guide</a></li>
+          <li><a href="tips.html">Beginner Tips</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Important PC Components</h2>
+
+        <p>
+          A computer is made up of several components that work together. Understanding what each component does is one of the first steps toward building your computer.
+        </p>
+      </section>
+
+      <section>
+        <h2>CPU</h2>
+
+        <img
+          src="images/cpu.jpg"
+          alt="Computer CPU processor"
+        />
+
+        <p>
+          The Central Processing Unit, or CPU, performs the calculations and instructions needed for the computer to operate, often being described as the brain of the computer.
+        </p>
+
+        <p>
+          When choosing a CPU, consider its performance, price, and compatibility with the motherboard.
+        </p>
+      </section>
+
+      <section>
+        <h2>GPU</h2>
+
+        <img
+          src="images/gpu.jpg"
+          alt="Computer graphics card"
+        />
+
+        <p>
+          The Graphics Processing Unit, or GPU, is responsible for processing graphics and displaying images on the monitor.
+        </p>
+
+        <p>
+          A powerful GPU is especially useful for gaming, video editing, 3D modeling, and other graphics-intensive tasks.
+        </p>
+      </section>
+
+      <section>
+        <h2>Motherboard</h2>
+
+        <img
+          src="images/motherboard.jpg"
+          alt="Computer motherboard"
+        />
+
+        <p>
+          The motherboard is the main circuit board inside the computer. Components such as the CPU, RAM, storage, and graphics card connect to the motherboard.
+        </p>
+
+        <p>
+          The motherboard must be compatible with your CPU and should provide the features needed for the rest of your build.
+        </p>
+      </section>
+
+      <section>
+        <h2>RAM</h2>
+
+        <img
+          src="images/ram.jpg"
+          alt="Computer RAM memory modules"
+        />
+
+        <p>
+          Random Access Memory, or RAM, temporarily stores information that programs are actively using. Having enough RAM helps the computer run multiple programs efficiently.
+        </p>
+      </section>
+
+      <section>
+        <h2>Storage</h2>
+
+        <img
+          src="images/ssd.jpg"
+          alt="Solid state drive used for computer storage"
+        />
+
+        <p>
+          Storage holds your operating system, applications, games, documents, photos, and all other files.
+        </p>
+
+        <p>
+          Solid-state drives, or SSDs, are commonly used because they provide fast startup and loading times.
+        </p>
+      </section>
+
+      <section>
+        <h2>Power Supply</h2>
+
+        <img
+          src="images/PSU.jpg"
+          alt="Computer power supply unit"
+        />
+
+        <p>
+          The Power Supply Unit, or PSU, supplies electrical power to the computer's components.
+        </p>
+
+        <p>
+          A power supply should be reliable and provide enough power for the entire system.
+        </p>
+      </section>
+
+      <section>
+        <h2>Computer Case</h2>
+
+        <p>
+          The computer case holds and protects all of the components. The case must have enough room for the motherboard, graphics card, power supply, cooling system, and other hardware.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cooling</h2>
+
+        <p>
+          Computers generate heat while operating. Fans and CPU coolers help remove this heat and keep the components at safe operating temperatures.
+        </p>
+      </section>
+
+      <section>
+        <h2>PC Budget Calculator</h2>
+
+        <p>
+          Select example prices for a CPU, GPU, and RAM to estimate the cost of these three major components.
+        </p>
+
+        <form>
+          <p>
+            <label for="cpu-price">CPU:</label>
+
+            <select id="cpu-price">
+              <option value="150">$150</option>
+              <option value="250">$250</option>
+              <option value="350">$350</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="gpu-price">GPU:</label>
+
+            <select id="gpu-price">
+              <option value="250">$250</option>
+              <option value="400">$400</option>
+              <option value="600">$600</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="ram-price">RAM:</label>
+
+            <select id="ram-price">
+              <option value="50">$50</option>
+              <option value="80">$80</option>
+              <option value="120">$120</option>
+            </select>
+          </p>
+
+          <p>
+            Estimated Total:
+            <output id="budget-total" for="cpu-price gpu-price ram-price">
+              $450
+            </output>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Reusable Component Example</h2>
+
+        <p>
+          Click the button below to display an example computer component.
+        </p>
+
+        <button id="show-template">Show Component Example</button>
+
+        <div id="template-location"></div>
+
+        <template id="part-template">
+          <article>
+            <h3>Graphics Card</h3>
+
+            <p>
+              The graphics card processes visual information and is especially important for gaming and graphics-intensive applications.
+            </p>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <footer>
+      <p>Custom PC Building Guide | Jaspreet Singh | COMP 484</p>
+    </footer>
+
+    <script>
+      const cpuPrice = document.getElementById("cpu-price");
+      const gpuPrice = document.getElementById("gpu-price");
+      const ramPrice = document.getElementById("ram-price");
+      const budgetTotal = document.getElementById("budget-total");
+
+      function updateBudget() {
+        const total =
+          Number(cpuPrice.value) +
+          Number(gpuPrice.value) +
+          Number(ramPrice.value);
+
+        budgetTotal.textContent = "$" + total;
+      }
+
+      cpuPrice.addEventListener("change", updateBudget);
+      gpuPrice.addEventListener("change", updateBudget);
+      ramPrice.addEventListener("change", updateBudget);
+
+      const templateButton = document.getElementById("show-template");
+      const partTemplate = document.getElementById("part-template");
+      const templateLocation = document.getElementById("template-location");
+
+      templateButton.addEventListener("click", function () {
+        const copiedContent = partTemplate.content.cloneNode(true);
+
+        templateLocation.innerHTML = "";
+        templateLocation.appendChild(copiedContent);
+      });
+    </script>
+  </body>
+</html>
