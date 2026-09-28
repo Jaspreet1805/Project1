@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Beginner Tips | Custom PC Building Guide</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Custom PC Building Guide</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="parts.html">PC Parts</a></li>
+          <li><a href="building.html">Build Guide</a></li>
+          <li><a href="tips.html">Beginner Tips</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Beginner PC Building Tips</h2>
+
+        <p>
+          Planning your build before purchasing components can save time and help prevent expensive mistakes. These tips can make your first PC build easier.
+        </p>
+      </section>
+
+      <section>
+        <h2>Check Compatibility</h2>
+
+        <p>
+          Not every computer component works with every other component. Make sure your CPU is compatible with your motherboard and that your case has enough room for your graphics card, power supply, motherboard, and cooling system.
+        </p>
+
+        <button popovertarget="compatibility-popover">
+          Compatibility Quick Tip
+        </button>
+
+        <div id="compatibility-popover" popover>
+          <h3>Compatibility Tip</h3>
+
+          <p>
+            Check the CPU socket, motherboard size, RAM type, graphics card size, and power supply requirements before buying your parts.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Create a Budget</h2>
+
+        <p>
+          Decide how much you want to spend before choosing your components. Your budget can help determine which parts are most important for your needs. I also suggest spending a little extra on essential components like the power supply and cooling system to ensure stability and longevity.
+        </p>
+
+        <p>
+          Try to build a balanced computer instead of spending most of your money on only one component.
+        </p>
+      </section>
+
+      <section>
+        <h2>Choose the Right Power Supply</h2>
+
+        <p>
+          Make sure your power supply provides enough power for all of your components. A reliable power supply is important because every part of your computer depends on it. Always choose a power supply from a reputable brand and ensure it has the necessary wattage for your build.
+        </p>
+
+        <p>
+          Having some extra power capacity can also make future upgrades easier.
+        </p>
+      </section>
+
+      <section>
+        <h2>Handle Components Carefully</h2>
+
+        <p>
+          Computer components can be damaged if they are handled incorrectly. Avoid touching electrical contacts and do not force a component into a slot.
+        </p>
+      </section>
+
+      <section>
+        <h2>Keep Cables Organized</h2>
+
+        <p>
+          Good cable management makes the inside of your computer easier to work with and can help prevent cables from blocking airflow.
+        </p>
+      </section>
+
+      <section>
+        <h2>Read the Manuals</h2>
+
+        <p>
+          Your motherboard and other components include important installation instructions. Keeping the manuals nearby can make the building process and troubleshooting much easier.
+        </p>
+      </section>
+
+      <section>
+        <h2>Install Drivers</h2>
+
+        <p>
+          After installing your operating system, install the correct drivers for components such as your motherboard and graphics card.
+        </p>
+
+        <p>
+          Drivers help the operating system communicate properly with your computer hardware.
+        </p>
+      </section>
+
+      <section>
+        <h2>Common Mistakes to Avoid</h2>
+
+        <img
+          src="images/mood.jpg"
+          alt="mood"
+        />
+
+        <ul>
+          <li>Buying incompatible components</li>
+          <li>Forgetting to connect power cables</li>
+          <li>Using too much force when installing parts</li>
+          <li>Forgetting to remove protective packaging</li>
+          <li>Connecting the monitor to the wrong video port</li>
+          <li>Not reading the motherboard manual</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Before You Start Building</h2>
+
+        <p>
+          Review one final reminder before beginning your first PC build.
+        </p>
+
+        <button id="open-dialog">Open Building Reminder</button>
+
+        <dialog id="building-dialog">
+          <h3>Before You Build</h3>
+
+        <img
+          src="images/up.jpg"
+          alt="Good luck"
+        />
+          <p>
+            Double-check that your components are compatible, organize your tools, read your manuals, and work carefully when handling your computer parts.
+          </p>
+
+
+          <form method="dialog">
+            <button>Close</button>
+          </form>
+        </dialog>
+      </section>
+    </main>
+
+    <footer>
+      <p>Custom PC Building Guide | Jaspreet Singh | COMP 484</p>
+    </footer>
+
+    <script>
+      const openDialogButton = document.getElementById("open-dialog");
+      const buildingDialog = document.getElementById("building-dialog");
+
+      openDialogButton.addEventListener("click", function () {
+        buildingDialog.showModal();
+      });
+    </script>
+  </body>
+</html>
