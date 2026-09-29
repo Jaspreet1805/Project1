@@ -1,3 +1,8 @@
+
+/* Website */
+/* Keeping website more organized and formal considering its a step by step tutorial */
+/* Tried for a RGB theme for the website to match RGB of computers */
+
 html {
     background: #290fd5;
     margin: 0;
@@ -24,20 +29,21 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
     font: 2em Verdana, Geneva, sans-serif;
-    color: rgb(83, 104, 138);
+    color: rgb(255, 2, 2);
     margin-bottom: .4em;
+    font-weight: bold;
 }
 
 h2 {
     font: 1.6em Georgia, "Times New Roman", Times, serif;
-    color: rgb(40, 115, 185);
+    color: rgb(255, 0, 0);
     margin-bottom: .6em;
-    border-bottom: 2px solid #e0a52b;
+    border-bottom: 2px solid #30f317;
 }
 
 h3 {
     font-size: 1.2em;
-    color: rgb(83, 104, 138);
+    color: rgb(255, 8, 0);
 }
 
 p {
@@ -60,7 +66,7 @@ header h1 {
 
 nav {
     background-color: #000f3b;
-    border-bottom: 5px solid #797bff;
+    border-bottom: 5px solid #ff0000;
     margin-top: 1em;
     margin-left: -20px;
     margin-right: -20px;
@@ -79,15 +85,15 @@ nav li {
 
 nav a {
     display: block;
-    color: white;
+    color: rgb(255, 0, 0);
     text-decoration: none;
     font-weight: bold;
     padding: 15px 25px;
 }
 
 nav a:hover {
-    background-color: #24556a;
-    color: white;
+    background-color: #73ff00;
+    color: rgb(0, 17, 255);
 }
 
 
@@ -232,7 +238,7 @@ dialog::backdrop {
 /* Footer */
 
 footer {
-    border-top: 1px solid gray;
+    border-top: 1px solid rgb(9, 255, 0);
     text-align: center;
     font-size: .8em;
     line-height: 4em;
